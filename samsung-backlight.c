@@ -235,6 +235,15 @@ static struct dmi_system_id __initdata samsung_dmi_table[] = {
                 },
                 .callback = dmi_check_cb,
         },
+        {
+                .ident = "SQ1S",
+                .matches = {
+                         DMI_MATCH(DMI_SYS_VENDOR, "SAMSUNG ELECTRONICS CO., LTD."),
+                         DMI_MATCH(DMI_PRODUCT_NAME, "SQ1S"),
+                         DMI_MATCH(DMI_BOARD_NAME, "SQ1S"),
+                },
+                .callback = dmi_check_cb,
+        },
         { },
 };
 
@@ -313,3 +322,4 @@ MODULE_ALIAS("dmi:*:svnSAMSUNGELECTRONICSCO.,LTD.:pnN230:*:rnN230:*");
 MODULE_ALIAS("dmi:*:svnSAMSUNGELECTRONICSCO.,LTD.:pnN350:*:rnN350:*");
 MODULE_ALIAS("dmi:*:svnSAMSUNGELECTRONICSCO.,LTD.:pnR470/R420:*:rnR470/R420:*");
 MODULE_ALIAS("dmi:*:svnSAMSUNGELECTRONICSCO.,LTD.:pnR528/R728:*:rnR528/R728:*");
+MODULE_ALIAS("dmi:*:svnSAMSUNGELECTRONICSCO.,LTD.:pnSQ1S:*:rnSQ1S:*");
