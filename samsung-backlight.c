@@ -238,7 +238,7 @@ static struct dmi_system_id __initdata samsung_dmi_table[] = {
         {
                 .ident = "SQ1S",
                 .matches = {
-                         DMI_MATCH(DMI_SYS_VENDOR, "SAMSUNG ELECTRONICS CO., LTD."),
+                         DMI_MATCH(DMI_SYS_VENDOR, "SAMSUNG ELECTRONICS CO.,LTD"),
                          DMI_MATCH(DMI_PRODUCT_NAME, "SQ1S"),
                          DMI_MATCH(DMI_BOARD_NAME, "SQ1S"),
                 },
@@ -271,6 +271,8 @@ static int __init samsung_init(void)
                 pci_device = pci_get_device(PCI_VENDOR_ID_INTEL, 0x2a42, NULL);
         if (!pci_device)
                 pci_device = pci_get_device(PCI_VENDOR_ID_INTEL, 0xa011, NULL);
+        if (!pci_device)
+                pci_device = pci_get_device(PCI_VENDOR_ID_INTEL, 0x2592, NULL);
         if (!pci_device)
                 return -ENODEV;
         
